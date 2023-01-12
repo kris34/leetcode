@@ -8,6 +8,7 @@ var interpret = function (command) {
   let result = '';
 
   for (let i = 0; i < command.length; i++) {
+    let char = command[i]
     if (command[i] == 'G') {
       result += 'G';
     } else if (command[i + 1] == ')') {
