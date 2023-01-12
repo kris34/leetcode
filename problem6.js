@@ -1,4 +1,4 @@
-var maximum69Number = function (num) {
+/* var maximum69Number = function (num) {
   if (num == 9999 || num == 999 || num == 99 || num == 9) {
     return num;
   }
@@ -17,4 +17,10 @@ var maximum69Number = function (num) {
   }
 };
 
+console.log(maximum69Number(9669));
+ */
+
+var maximum69Number = function (num) {
+  return +`${num}`.replace('6', '9');
+};
 console.log(maximum69Number(9669));
