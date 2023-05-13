@@ -22,7 +22,7 @@ var decodeMessage = function (key, message) {
     }
   }
 
-  console.log(result);
+  return result
 };
 
 decodeMessage(
