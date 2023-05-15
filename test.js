@@ -1,9 +1,16 @@
-function add(number) {
-    if (number <= 0) {
-      return 0;
-    } else {
-      return number + add(number - 1);
-    }
+function fibonacci(n) {
+  let a = 0;
+  let b = 1;
+
+  let nums = [0, 1];
+
+  for (let i = 0; i < n; i++) {
+    let next = nums[i] + nums[i + 1];
+
+    nums.push(next);
+    console.log(next);
   }
-  add(3)
-  
+
+  console.log(nums.join(' '));
+}
+console.log(fibonacci(20));
