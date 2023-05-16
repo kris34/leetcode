@@ -1,16 +1,12 @@
-function fibonacci(n) {
-  let a = 0;
-  let b = 1;
-
-  let nums = [0, 1];
+function solve(n) {
+  let fibo = [0, 1];
 
   for (let i = 0; i < n; i++) {
-    let next = nums[i] + nums[i + 1];
-
-    nums.push(next);
-    console.log(next);
+    let next = fibo[i] + fibo[i + 1];
+    fibo.push(next);
   }
 
-  console.log(nums.join(' '));
+  console.log(fibo);
 }
-console.log(fibonacci(20));
+
+solve(20);
