@@ -1,4 +1,4 @@
-/* var majorityElement = function (nums) {
+ var majorityElement = function (nums) {
   let numsObj = {};
 
   if (nums.length == 1) {
@@ -24,7 +24,7 @@
   return result;
 };
 
-majorityElement([3, 2, 3]); */
+majorityElement([3, 2, 3]); 
 
 var majorityElement = function(nums) {
     let map = {}
