@@ -8,7 +8,7 @@ var maxProfit = function (prices) {
 
       max_profit = Math.max(max_profit, profit);
     } else {
-      left = right;
+      left = right
     }
     right++;
   }
