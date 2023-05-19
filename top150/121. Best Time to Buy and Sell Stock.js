@@ -1,18 +1,20 @@
-var maxProfit = function (prices) {
-    let left = 0; // Buy
-  let right = 1; // sell
-  let max_profit = 0;
-  while (right < prices.length) {
-    if (prices[left] < prices[right]) {
-      let profit = prices[right] - prices[left]; // our current profit
+function bestTimeToSell(arr) {
+  let buy = 0;
+  let sell = 1;
+  let maxProfit = 0;
 
-      max_profit = Math.max(max_profit, profit);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[buy] < arr[sell]) {
+      let profit = arr[sell] - arr[buy];
+      maxProfit = Math.max(maxProfit, profit);
     } else {
-      left = right
+      buy = sell
     }
-    right++;
-  }
-  return max_profit;
-};
 
-maxProfit([3, 2, 6, 5, 0, 3]);
+    sell++;
+  }
+
+  return maxProfit
+}
+
+bestTimeToSell([7, 1, 5, 3, 6, 4]);
