@@ -1,9 +1,14 @@
 var climbStairs = function (n) {
-  let arr = [1, 1, 2];
-  for (let i = 3; i <= n; i++) {
-    arr[i] = arr[i - 1] + arr[i - 2];
+  let one = 0;
+  let two = 1;
+  let result;
+
+  for (let i = 1; i <= n; i++) {
+    result = two + one;
+    one = two;
+    two = result;
   }
-  console.log(arr[n]);
+  return two
 };
 
-climbStairs(8);
+climbStairs(5);

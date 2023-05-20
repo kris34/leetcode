@@ -10,8 +10,8 @@ var diagonalSum = function (mat) {
       // if right crosses left we take left and add it to sum
       sum += mat[i][left];
     } else {
-      console.log(mat[i][right]);
-      console.log(mat[i][left]);
+      //console.log(mat[i][right]);
+      //console.log(mat[i][left]);
       sum += mat[i][left] + mat[i][right];
     }
     //we add 1 to left so it moves to the right and we remove 1 from right so it moves left
