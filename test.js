@@ -1,11 +1,14 @@
-function fib(nums1, m, nums2, n) {
-    let index = 0
-    for(let i = m; i < nums1.length;i++){ 
-        nums1[i] = nums2[index]
-        index++
+function test(nums, val) {
+  var zeroStartIdx = 0;
+  
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[zeroStartIdx] = nums[i];
+      zeroStartIdx++;
     }
+  }
+  
 
-    return nums1.sort()
-   
+  return zeroStartIdx;
 }
-fib([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+test([3, 2, 2, 3], 3);
